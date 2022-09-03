@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+p{
+    font-size: 1em;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+:root{
+    --branco: hsl(0, 0%, 100%); 
+    --cinza: hsl(212, 45%, 89%);
+    --AzulCoisado: hsl(220, 15%, 55%);
+    --AzulEscuro:hsl(218, 44%, 22%);
+}
+body{
+    background-color: var(--cinza);
+    height: 100vh;
+    position: relative;
+}
+
+main{
+    background-color: white;
+    width: 320px;
+    padding: 12px;
+    border-radius: 17px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.096);
+    margin: 100px auto;
+}
+.topside img {
+    border-radius: 17px;
+    width: 100%;
+}
+.conteudo{
+    width: 100%;
+    padding: 13px;
+    margin-top: 10px;
+}
+.conteudo h2{
+    font-size: 1.4em;
+    text-align: center;
+}
+.legenda{
+    margin-top: 13px;
+    text-align: center;
+    color: var(--AzulCoisado);
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    background-color: var(--AzulEscuro);
+    width: 100%;
+}
+.attribution{
+    text-align: right;
+    margin-bottom: 10px;
+    color: white;
+}
+footer a {
+    text-decoration: underline;
+}
+footer a:hover{
+    color: var(--AzulCoisado);
+}
