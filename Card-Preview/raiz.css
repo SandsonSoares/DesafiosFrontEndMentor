@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,200;0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,100;1,9..144,200;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700;1,9..144,800;1,9..144,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /*Cores*/
+    --PrimariaCyan: hsl(158, 36%, 37%);
+    --PrimariaCream: hsl(30, 38%, 92%);
+
+    /*Neutras*/
+    --VeryDarkBlue: hsl(212, 21%, 14%);
+    --DarkGrayishBlue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+
+    /*Fontes*/
+    --fonteCorpo: 'Montserrat', sans-serif;
+    --fonteEspecial: 'Fraunces', serif;
+}
+.corpo{
+    font-family: var(--fonteCorpo);
+    color: var(--DarkGrayishBlue);
+    font-size: 14px;
+    font-weight: 500;
+}
+.especial{
+    font-family: var(--fonteEspecial);
+    font-weight: 700;
+}
+body{
+    background-color: var(--PrimariaCream);
+    height: 100vh;
+    position: relative;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/*------------------------------------------------*/
+main{
+    background-color: var(--White);
+    min-width: 375px;
+    max-width: 600px;
+    height: 400px;
+    margin: 150px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.149);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+#left{
+    width: 50%;
+    height: 100%;
+    background-image: url(images/image-product-desktop.jpg);
+    background-position: center center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#right{
+    width: 50%;
+    height: 100%;
+    
+}
+.descrition{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.destaque{
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: .9em;
+
+}
+.descrition h1{
+    font-size: 1.6em;
+}
+
+.price p {
+    display: inline-block;
+}
+#riscado{
+    margin-left: 15px;
+    text-decoration: line-through;
+}
+#valor{
+    font-size: 2em;
+    color: var(--PrimariaCyan);
+}
+button{
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--PrimariaCyan);
+    color: var(--White);
+    font-family: var(--fonteCorpo);
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+svg{
+    margin-right: 8px;
+}
+button:active{
+    background-color: var(--VeryDarkBlue);
+}
+@media (max-width: 600px) {
+    main{
+        flex-direction: column;
+        flex-wrap: wrap;
+        min-width: auto;
+        width: 300px;
+        height: 480px;
+    }
+    #left{
+        background-image: url(images/image-product-mobile.jpg);
+        background-position: top center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 10px;
+        height: 40%;
+        width: 100%;
+    }
+    #right{
+        height: 60%;
+        width: 100%;
+    }
+    .descrition{
+        padding: 15px;
+    }
+    .descrition h1{
+        font-size: 1.4em;
+    }
+
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    background-color: var(--VeryDarkBlue);
+    width: 100%;
+    text-align: right;
+    color: white;
+    height: 50px;
+    padding: 10px;
+    font-family: var(--fonteCorpo);
+}
+footer a {
+    text-decoration: underline;
+}
+footer a:hover {
+    color: var(--DarkGrayishBlue);
+}
