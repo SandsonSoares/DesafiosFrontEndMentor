@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--Principal);
+}
+
+:root {
+    --1PaleBlue: hsl(225, 100%, 94%);
+    --1BrightBlue: hsl(245, 75%, 52%);
+
+    --2VeryPaleBlue: hsl(225, 100%, 98%);
+    --2DesaturedBlue: hsl(224, 23%, 55%);
+    --2DarkBlue: hsl(223, 47%, 23%);
+    --2BrightBlue: hsla(245, 75%, 52%, 0.623);
+
+    /*FONT*/
+
+    --Principal: 'Red Hat Display', sans-serif;
+}
+
+p {
+    color: var(--2DesaturedBlue);
+    font-weight: 500;
+}
+
+body {
+    background-color: var(--1PaleBlue);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#fundo {
+    width: 100%;
+    height: 100%;
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center top;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#cartao {
+    min-width: 375px;
+    max-width: 450px;
+    height: 730px;
+    background-color: white;
+    border-radius: 13px;
+    box-shadow:
+        0px 0px 5.3px rgba(0, 0, 0, 0.048),
+        0px 0px 17.9px rgba(0, 0, 0, 0.072),
+        0px 0px 80px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 10px;
+}
+
+#TopSide {
+    height: 30%;
+    width: 100%;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+}
+#hero{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+}
+
+#BotSide {
+    height: 70%;
+    padding: 50px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+#BotSide h1 {
+    font-size: 1.7em;
+    font-weight: 900;
+}
+
+#card {
+    background-color: var(--2VeryPaleBlue);
+    padding: 20px;
+    border-radius: 13px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#planos {
+    margin-left: -25px;
+}
+
+#mudar {
+    color: var(--1BrightBlue);
+    font-weight: 700;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#mudar:hover {
+    text-decoration: none;
+}
+
+#confirm {
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--1BrightBlue);
+    color: white;
+    font-weight: 700;
+    letter-spacing: 1px;
+    box-shadow:
+        0px 3px 2.2px rgba(0, 0, 0, 0.034),
+        0px 7.3px 5.3px rgba(0, 0, 0, 0.048),
+        0px 13.8px 10px rgba(0, 0, 0, 0.06),
+        0px 24.6px 17.9px rgba(0, 0, 0, 0.072),
+        0px 46px 33.4px rgba(0, 0, 0, 0.086),
+        0px 110px 80px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+}
+
+#mudar:hover,
+#confirm:hover{
+    opacity: .7;
+}
+
+#cancel {
+    font-weight: 700;
+    color: var(--2DesaturedBlue);
+    cursor: pointer;
+}
+
+#cancel:hover {
+    color: var(--2DarkBlue);
+}
+
+/*Footer*/
+footer{
+    width: 100%;
+    height: 40px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--2DarkBlue);
+}
+.rodape{
+    color: white;
+}
+.rodape a {
+    text-decoration: underline;
+    color: white;
+}
+.rodape a:hover {
+    text-decoration: none;
+    color: var(--2DesaturedBlue);
+}
+@media (min-height: 850px) {
+    footer{
+        position: absolute;
+        bottom: 0;
+    }
+}
+@media (max-width: 500px) {
+    #card{
+        justify-content: space-between;
+    }
+}
