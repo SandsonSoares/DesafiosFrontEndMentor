@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: lightgray;
+}
+
+main {
+    min-width: 375;
+    max-width: 1440px;
+    min-height: 500px;
+    max-height: 1000px;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    box-shadow:
+        0px 0px 2.2px rgba(0, 0, 0, 0.062),
+        0px 0px 5.3px rgba(0, 0, 0, 0.089),
+        0px 0px 10px rgba(0, 0, 0, 0.11),
+        0px 0px 17.9px rgba(0, 0, 0, 0.131),
+        0px 0px 33.4px rgba(0, 0, 0, 0.158),
+        0px 0px 80px rgba(0, 0, 0, 0.22);
+        border-radius: 13px;
+        padding: 10px;
+}
+.lista {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+.lista li{
+    width: 100%;
+}
+.topside{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    cursor: pointer;
+}
+.topside span{
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-90deg);
+    transition: all 222ms;
+}
+.conteudo{
+    margin: 5px;
+    padding-left: 5px;
+    width: 90%;
+    display: none;
+}
