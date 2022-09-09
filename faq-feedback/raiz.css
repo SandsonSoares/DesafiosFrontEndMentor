@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.corpo {
+    font-size: 12px;
+    /*color: var(--DarkGrayishBlue); */
+}
+
+:root {
+    /*Cores do gradiente*/
+    --Violeta: hsl(273, 75%, 66%);
+    --Blue: hsl(240, 73%, 65%);
+
+    /*Text*/
+    --darkGrayishBlue: hsl(237, 12%, 33%);
+    --DarkGrayishBlue: hsl(240, 6%, 50%);
+    --SoftRed: hsl(14, 88%, 65%);
+    --VeryDarkBlue: hsl(238, 29%, 16%);
+
+    /*Divisores*/
+    --LightGrayBlue: hsl(240, 5%, 91%);
+}
+
+body {
+    background-image: linear-gradient(to bottom, var(--Violeta), var(--Blue));
+    background-attachment: fixed;
+    height: 110vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    background-color: white;
+    min-width: 365px;
+    max-width: 1100px;
+    min-height: 300px;
+    max-height: 1200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto 20px;
+}
+
+@media (max-width:1100px) {
+    main {
+        flex-direction: column;
+    }
+    #left{
+        height: 30%;
+    }
+    #right{
+        height: 70%;
+    }
+}
+
+@media (max-width:710px) {
+    main {
+        width: 375px;
+    }
+
+    body {
+        height: 140vh;
+    }
+}

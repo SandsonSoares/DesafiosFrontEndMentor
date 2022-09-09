@@ -1,40 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | FAQ Accordion Card</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="raiz.css">
+  <script src="raiz.js"></script>
 </head>
+
 <body>
-  How many team members can I invite?
-  You can invite up to 2 additional users on the Free plan. There is no limit on 
-  team members for the Premium plan.
+  <main>
+    <section id="left">
+      <div class="tela">
+        <img src="images/illustration-woman-online-desktop.svg" alt="Mulher consultando o FAQ" id="woman">
+      </div>
+      <img src="images/illustration-box-desktop.svg" alt="Box do Arroba" id="box">
+      <!-- Backgroudo com o losango -->
+    </section>
 
-  What is the maximum file upload size?
-  No more than 2GB. All files in your account must fit your allotted storage space.
+    <!-- FAQ -->
 
-  How do I reset my password?
-  Click “Forgot password” from the login page or “Change password” from your profile page.
-  A reset link will be emailed to you.
+    <section id="right">
+      <h1 id="faq">FAQ</h1>
+      <ul class="lista">
+        <li>
+          <article onclick="Info(0)">
+            <h2 class="titulo" >How many team members can I invite?</h2>
+            <span class="seta"><svg width="10" height="7" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd" />
+              </svg></span>
+          </article>
+          <div class="conteudo">
+            <p class="corpo">  You can invite up to 2 additional users on the Free plan. There is no limit on 
+              team members for the Premium plan.</p>
+          </div>
+        </li>
 
-  Can I cancel my subscription?
-  Yes! Send us a message and we’ll process your request no questions asked.
+        <li>
+          <article onclick="Info(1)">
+            <h2 class="titulo" >  What is the maximum file upload size?</h2>
+            <span class="seta"><svg width="10" height="7" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd" />
+              </svg></span>
+          </article>
+          <div class="conteudo">
+            <p class="corpo">  No more than 2GB. All files in your account must fit your allotted storage space.</p>
+          </div>
+        </li>
 
-  Do you provide additional support?
-  Chat and email support is available 24/7. Phone lines are open during normal business hours.
+        <li>
+          <article onclick="Info(2)">
+            <h2 class="titulo" >  How do I reset my password?</h2>
+            <span class="seta"><svg width="10" height="7" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd" />
+              </svg></span>
+          </article>
+          <div class="conteudo">
+            <p class="corpo">  Click “Forgot password” from the login page or “Change password” from your profile page.
+              A reset link will be emailed to you.</p>
+          </div>
+        </li>
+
+        <li>
+          <article onclick="Info(3)">
+            <h2 class="titulo" >  Can I cancel my subscription?</h2>
+            <span class="seta"><svg width="10" height="7" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd" />
+              </svg></span>
+          </article>
+          <div class="conteudo">
+            <p class="corpo">  Yes! Send us a message and we’ll process your request no questions asked.</p>
+          </div>
+        </li>
+
+        <li>
+          <article onclick="Info(4)">
+            <h2 class="titulo" >  Do you provide additional support?</h2>
+            <span class="seta"><svg width="10" height="7" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd" />
+              </svg></span>
+          </article>
+          <div class="conteudo">
+            <p class="corpo">
+              Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
 
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
+
 </html>
