@@ -9,7 +9,7 @@
 
 .corpo {
     font-size: 12px;
-    /*color: var(--DarkGrayishBlue); */
+    color: var(--DarkGrayishBlue);
 }
 
 :root {
@@ -30,8 +30,8 @@
 body {
     background-image: linear-gradient(to bottom, var(--Violeta), var(--Blue));
     background-attachment: fixed;
-    height: 110vh;
-    width: 100vw;
+    height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -41,28 +41,115 @@ body {
 
 main {
     background-color: white;
-    min-width: 365px;
-    max-width: 1100px;
-    min-height: 300px;
-    max-height: 1200px;
-    padding: 20px;
+    min-width: 375px;
+    max-width: 1400px;
+    min-height: 400px;
+    max-height: 2000px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    margin: auto 20px;
+    margin: 40px;
+    border-radius: 18px;
+    box-shadow:
+        0px 4.1px 2.7px rgba(0, 0, 0, 0.024),
+        0px 10.3px 6.9px rgba(0, 0, 0, 0.039),
+        0px 20.9px 14.2px rgba(0, 0, 0, 0.051),
+        0px 43.1px 29.2px rgba(0, 0, 0, 0.068),
+        0px 118px 80px rgba(0, 0, 0, 0.11);
+    transition: all 222ms;
+}
+
+#left {
+    width: 50%;
+    height: 100%;
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 700px;
+    background-position-x: -310px;
+    background-position-y: -60px;
+    position: relative;
+}
+
+#right {
+    width: 50%;
+    height: 100%;
+    padding: 50px;
+}
+#right>h1 {
+    margin-bottom: 15px;
+}
+
+.imagem {
+    width: 100%;
+    height: 100%;
+}
+
+.especial {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#woman {
+    width: 420px;
+    height: 420px;
+    display: block;
+    margin-top: 70px;
+    margin-left: -59px;
+}
+
+#box {
+    display: block;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 262px;
+    left: -73px;
+}
+
+#woman1 {
+    display: none;
+    width: 300px;
+    height: 300px;
 }
 
 @media (max-width:1100px) {
     main {
         flex-direction: column;
     }
-    #left{
+
+    #left {
+        width: 100%;
         height: 30%;
+        position: relative;
+        background-image: none;
     }
-    #right{
-        height: 70%;
+
+    #right {
+        width: 100%;
+        height: 91%;
+    }
+
+    #box {
+        display: none;
+    }
+
+    #woman {
+        display: none;
+    }
+
+    .especial {
+        overflow: visible;
+        display: flex;
+        justify-content: center;
+    }
+
+    #woman1 {
+        display: block;
+        margin-top: -170px;
     }
 }
 
@@ -74,4 +161,45 @@ main {
     body {
         height: 140vh;
     }
+}
+
+
+/*Configurando as quests*/
+
+.titulo {
+    font-weight: 350;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.titulo:hover {
+    color: var(--SoftRed);
+}
+
+.lista { 
+    list-style: none;
+}
+.lista li {
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border-bottom: 1px solid var(--LightGrayBlue);
+}
+article{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.seta{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(180deg);
+    transition: all 222ms;
+}
+.conteudo{
+    display: none;
+    width: 100%;
 }
