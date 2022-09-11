@@ -203,3 +203,15 @@ article{
     display: none;
     width: 100%;
 }
+
+.rodape{
+    color: white; 
+    font-size: .8em;
+}
+.rodape a {
+    color: white;
+}
+.rodape a:hover{
+    color: var(--SoftRed);
+    text-decoration: none;
+}
